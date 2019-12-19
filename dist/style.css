@@ -17,7 +17,7 @@ main-footer {
 }
 
 main {
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .container {
@@ -187,19 +187,74 @@ main {
 }
 
 footer {
-
-  height: 200px;
+  height: 250px;
   width: 100%;
   border: 1px solid black;
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: rgb(64, 64, 64, .2);
+  display: inline-flex;
 }
 
 footer .stats {
   list-style: none;
-  font-size: 30px;
-  /*font-weight: 3em;*/
-  /*margin: 5px auto 5px auto;*/
-  display: block;
+  font-size: 20px;
+  color: white;
+  margin-right: 50px;
+  /*margin-right: 40px;*/
 }
+
+footer #hunger {
+  margin: 20px 0 20px -10px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #AED137;
+  border-radius: 15px 50px; 
+  text-align: center;
+  background-color: #176A46;
+  /*display: inline-flex;*/
+  /*position: absolute;*/
+}
+
+footer #boredom {
+  margin: 20px 0 20px -10px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #AED137;
+  border-radius: 15px 50px; 
+  text-align: center;
+  background-color: #176A46;
+}
+
+footer #sleepiness {
+  margin: 20px 0 20px -10px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #AED137;
+  border-radius: 15px 50px; 
+  text-align: center;
+  background-color: #176A46;
+}
+
+/*footer .stats-box {
+  height: 8%;
+  width: 60px;
+  margin: 50px 0 20px 0;
+  border: 1px solid black;
+  display: flex;
+}*/
+
+footer #hunger-box1 {
+  height: 8%;
+  width: 60px;
+  margin: 50px 0 20px 0;
+  border: 1px solid black;
+  display: flex-block;
+}
+
+footer #hunger-box2 {
+  height: 88%;
+  width: 60px;
+  margin: 50px 10px 20px 0;
+  border: 2px solid black;
+  display: flex-block;
+}
+
+
 
