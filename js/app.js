@@ -2,7 +2,7 @@ console.log('tamagatchi mini game');
 
 
 
-class Tom {
+class Stewie {
 	constructors() {
 		this.name = name
 		this.age = age
@@ -15,16 +15,17 @@ class Tom {
 
 const game = {
 	name: '',
-	initiateTom() {
+	initiateStewie() {
 
 	},
 	startGame() {
 
 	},
-	beginTimer() {
+	checkTimer() {
 		const interval = setInterval(() => {
+
       	
-    	}, 100)
+    	}, 1000)
 	}
 }
 
