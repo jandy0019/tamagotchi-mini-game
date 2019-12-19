@@ -23,7 +23,9 @@ const game = {
 	},
 	startTimer() {
 		const interval = setInterval(() => {
-      	
+   		hunger--
+   		boredom--
+   		sleepiness--
     	}, 3000)
 	},
 	stopTimer() {
@@ -31,13 +33,13 @@ const game = {
       	
     	}, 1000)
 	},
-	hunger() {
+	feedTom() {
+		
+	},
+	sleepTom() {
 
 	},
-	sleepiness() {
-
-	},
-	boredom() {
+	entertainTom() {
 
 	}
 }
