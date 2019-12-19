@@ -20,6 +20,11 @@ const game = {
 	},
 	startGame() {
 
+	},
+	beginTimer() {
+		const interval = setInterval(() => {
+      	
+    	}, 100)
 	}
 }
 
