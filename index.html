@@ -1,86 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>tamagotchi mini game</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
- <!--  <link rel="stylesheet" href="./style.css"> -->
-  <link rel="stylesheet" type="text/css" href="dist/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>tamagotchi mini game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--  <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" type="text/css" href="dist/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-	<header>
-		<h1>Tamagotchi Mini Game</h1>
-	  	<form id="form">
-	  		<input type="text" id="name-field" placeholder="Enter Name"></input>
-	  		<button id="set-name">Set Name</button>
-			</form>
+    <header>
+        <h1>Tamagotchi Mini Game</h1>
+        <h2 id="name"></h2>
+        <form id="form">
+            <input type="text" id="name-field" placeholder="Enter Name"></input>
+            <button id="set-name">Set Name</button>
+        </form>
 
-	</header>
+    </header>
 
-	<!-- partial:index.partial.html -->
-<!-- <div id="main-footer"> -->
+    <!-- partial:index.partial.html -->
 
-	<div class ="statsdiv">
-	<ul class="stats">
-			<li id="age">Age: <span id="age-check">0</span></li>
-			<li id="hunger">Hunger: <span id="hunger-check">0</span></li>
-			<li id="boredom">Boredom: <span id="boredom-check">0</span></li>
-			<li id="sleepiness">Sleepiness: <span id="sleepiness-check">0</span></li>
-	</ul>
-	</div>
+    <div class="statsdiv">
+        <ul class="stats">
+            <li id="age">Age: <span id="age-check">0</span></li>
+            <li id="hunger">Hunger: <span id="hunger-check">0</span></li>
+            <li id="boredom">Boredom: <span id="boredom-check">0</span></li>
+            <li id="sleepiness">Sleepiness: <span id="sleepiness-check">0</span></li>
+        </ul>
+    </div>
 
-	<!-- <div class="img"></div> -->
 
-	
+    <div class="night">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div>
 
-	<main class="tom">
-		<div class="container">
-		  <div class="horn"> </div>
-		  <div class="horn right"> </div>
-		  <div class="head"> </div>
-		  <!-- <div class="head-after"></div> -->
-		  <div class="face">
-		    <div class="eye">
-		      <div class="iris"> </div>
-		    </div>
-		    <div class="mouth"> </div>
-		  </div>
-		  <div class="hand"></div>
-		  <div class="hand right"></div>
-		  <div class="leg">
-		    <div class="nail"></div>
-		    <div class="nail one"></div>
-		    <div class="nail two"></div>
-		  </div>
-		  <div class="leg two">
-		    <div class="nail"></div>
-		    <div class="nail one"></div>
-		    <div class="nail two"></div>
-		  </div>
-		</div>
-	</main>
-	<!-- partial -->
-			
-	<footer class="footer">
-		<div class ="tombuttons">
-			<button id="feed">FEED</button>
-			<button id="play">PLAY</button>
-			<button id="sleep">SLEEP</button>
-		</div>
-	</footer>
-<!-- </div> -->
-	
-  
-  	<script type="text/javascript" src="js/app.js"></script>
+    <main class="tom">
+        <div class="container">
+            <div class="horn"> </div>
+            <div class="horn right"> </div>
+            <div class="head"> </div>
+            <!-- <div class="head-after"></div> -->
+            <div class="face">
+                <div class="eye">
+                    <div class="iris"> </div>
+                </div>
+                <div class="mouth"> </div>
+            </div>
+            <div class="hand"></div>
+            <div class="hand right"></div>
+            <div class="leg">
+                <div class="nail"></div>
+                <div class="nail one"></div>
+                <div class="nail two"></div>
+            </div>
+            <div class="leg two">
+                <div class="nail"></div>
+                <div class="nail one"></div>
+                <div class="nail two"></div>
+            </div>
+        </div>
+    </main>
+    <!-- partial -->
+
+    <footer class="footer">
+        <div class="tombuttons">
+            <button id="feed">FEED</button>
+            <button id="play">PLAY</button>
+            <button id="sleep">SLEEP</button>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
