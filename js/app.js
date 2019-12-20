@@ -22,6 +22,7 @@ const game = {
 	newGame() {
 		const tom = new Tom(this.name, this.hunger, this.sleepiness, this.boredom, this.age)
 		console.log(tom);
+
 	},
 	startTimer() {
 		const interval = setInterval(() => {
@@ -30,7 +31,7 @@ const game = {
    		this.showStats()
    		console.log(this.time);
    		if (this.time % 5 === 0){
-	      		this.age++
+   				this.age++
 	      	}
 	   		if (this.time % 2 === 0) {
 		      		this.hunger++
@@ -51,16 +52,11 @@ const game = {
 	},
 	ageTom() {	
 		if (this.age = 1) {
-			$('.container').css({
-				'width': '400px',
-				'height': '400px'
-			})
 			$('.head').css({
-				'width': '400px',
-				'height': '400px',
 				'background': 'purple'
 			})
 		}
+		console.log('beepboop');
 	},
 	feedTom() {
 		if (this.hunger >= 1) 
@@ -77,14 +73,13 @@ const game = {
 			this.sleepiness -= 5
 			$('.container').fadeOut( "slow", function() {
  		 	});
- 		 	$('body').fadeOut( "slow", function() {
- 		 	});
- 		 		$('body').css('background-image', "")
-				$('body').append($('.stars'))
-				$('body').append($('.twinkling'))
-				$('body').append($('.clouds'))
- 		 	$('body').fadeIn( "slow", function() {
- 		 	});
+ 		 	// $('body').fadeOut( "slow", function() {
+ 		 	// });
+ 		 
+			$('body').append($('.stars'))
+			$('body').append($('.twinkling'))
+			$('body').append($('.clouds'))
+ 		 	
 			console.log($('.clouds'));
 			console.log();
 	},
@@ -92,9 +87,19 @@ const game = {
 		if (this.boredom >= 1) 
 			this.boredom -= 1
 			console.log();
-			// $('.tom').removeClass('.container')
-			// $('.tom').addClass('.container-play')
 			$('.head').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.horn').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.horn right').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.face').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.eye').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.iris').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.mouth').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.hand').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.hand right').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.leg').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.leg two').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.hand').css('animation', 'play 2s', 'ease 0s', 'infinite')
+			// $('.hand').css('animation', 'play 2s', 'ease 0s', 'infinite')
 		
 	},
 	deadTom() {
@@ -113,6 +118,7 @@ const game = {
 				'padding-top': '300px',
 				'text-align': 'center',
 				'background-color': 'black',
+				'background-image': '',
 	  			'color': 'white'
 			}).text(`R.I.P.`)
 	    	this.stopTimer()
@@ -131,7 +137,8 @@ const game = {
 				'padding-top': '300px',
 				'text-align': 'center',
 				'background-color': 'black',
-	  			'color': 'white'
+	  			'color': 'white',
+	  			'background-image': ''
 			}).text(`R.I.P.`)
 	    	this.stopTimer()
 	    } else if (this.sleepiness == 10) {
@@ -149,7 +156,8 @@ const game = {
 				'padding-top': '300px',
 				'text-align': 'center',
 				'background-color': 'black',
-					'color': 'white'
+				'color': 'white',
+				'background-image': ''
 			}).text(`R.I.P.`)
 	    	this.stopTimer()
 	    }

@@ -27,10 +27,10 @@ form {
   border: 1px solid green;
 }
 
-.img {
+/*.img {
   background-image: url(https://i.imgur.com/ok5t0KN.jpg);
   background-size: cover;
-}
+}*/
 
 .stars, .twinkling, .clouds {
   position:absolute;
@@ -71,7 +71,7 @@ form {
 
 .stats {
   list-style: none;
-  font-size: 20px;
+  font-size: 22px;
   color: white;
   margin-right: 50px;
   display: inline-block;
@@ -80,7 +80,7 @@ form {
 }
 
 #age {
-  margin: -50px 0 50px 20px;
+  margin: -50px 30px 50px 20px;
   padding: 5px 20px 5px 20px;
   border: 1px solid #AED137;
   border-radius: 15px 50px; 
@@ -89,7 +89,7 @@ form {
 }
 
 #hunger {
-  margin: -10px 0 20px 20px;
+  margin: -10px 30px 20px 20px;
   padding: 5px 20px 5px 20px;
   border: 1px solid #AED137;
   border-radius: 15px 50px; 
@@ -100,7 +100,7 @@ form {
 }
 
 #boredom {
-  margin: 40px 0 20px 20px;
+  margin: 40px 30px 20px 20px;
   padding: 5px 20px 5px 20px;
   border: 1px solid #AED137;
   border-radius: 15px 50px; 
@@ -382,7 +382,6 @@ footer {
   background-color: #176A46;
   height: 40%;
   width: 100px;
-  /*display: inline-block;*/
   font-size: 40px;
   font-family: 'Noto Sans KR', sans-serif;
   color: white;
@@ -413,9 +412,9 @@ footer {
 }
 
 @keyframes play {
-    0% {bottom: 250px;right: 280px}
-    50% {bottom: 280px;right: 250px}
-    100% {bottom: 250px;right: 280px}
+    0% {bottom: 50px;right: 180px}
+    50% {bottom: 180px;right: 150px}
+    100% {bottom: 150px;right: 180px}
 }
 
 @keyframes move-twink-back {
