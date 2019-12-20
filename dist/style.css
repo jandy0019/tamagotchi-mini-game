@@ -10,6 +10,7 @@ header {
   height: 100%;
   width: 100%;
   border: 1px solid black;
+  margin-bottom: 10%;
 }
 
 main-footer {
@@ -17,18 +18,24 @@ main-footer {
 }
 
 main {
-  margin-top: 10%;
+  margin: 10% 0 30% 0%;
+  padding-right: 40%;
+  animation: movebody 5s linear 0s infinite
+  padding-top: 20%;
+  position: relative;
+  display: flex-block;
 }
 
 .container {
-  position: relative;
-  margin: auto;
+  position: absolute;
+  margin: 0 auto;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   width: 200px;
   height: 200px;
+  animation: movebody 5s linear 0s infinite
 }
 
 .horn {
@@ -187,12 +194,13 @@ main {
 }
 
 footer {
-  height: 250px;
+  height: 40%;
   width: 100%;
   border: 1px solid black;
-  margin-top: 5%;
+  margin-top: 10%;
   background-color: rgb(64, 64, 64, .2);
-  display: inline-flex;
+  display: flex;
+  position: absolute;
 }
 
 footer .stats {
@@ -200,11 +208,13 @@ footer .stats {
   font-size: 20px;
   color: white;
   margin-right: 50px;
+  display: inline-block;
+  position: absolute;
   /*margin-right: 40px;*/
 }
 
 footer #hunger {
-  margin: 20px 0 20px -10px;
+  margin: 20px 0 20px 20px;
   padding: 5px 20px 5px 20px;
   border: 1px solid #AED137;
   border-radius: 15px 50px; 
@@ -215,7 +225,7 @@ footer #hunger {
 }
 
 footer #boredom {
-  margin: 20px 0 20px -10px;
+  margin: 20px 0 20px 20px;
   padding: 5px 20px 5px 20px;
   border: 1px solid #AED137;
   border-radius: 15px 50px; 
@@ -224,13 +234,21 @@ footer #boredom {
 }
 
 footer #sleepiness {
-  margin: 20px 0 20px -10px;
+  margin: 20px 0 20px 20px;
   padding: 5px 20px 5px 20px;
   border: 1px solid #AED137;
   border-radius: 15px 50px; 
   text-align: center;
   background-color: #176A46;
 }
+
+
+@keyframes movebody {
+    0% {bottom: 250px;right: 350px; left: -100px;}
+    50% {bottom: 375px;right: 250px; left: 440px;}
+    100% {bottom: 350px;right: 300px; left: 0px;}
+}
+
 
 /*footer .stats-box {
   height: 8%;
@@ -240,7 +258,7 @@ footer #sleepiness {
   display: flex;
 }*/
 
-footer #hunger-box1 {
+/*footer #hunger-box1 {
   height: 8%;
   width: 60px;
   margin: 50px 0 20px 0;
@@ -254,7 +272,7 @@ footer #hunger-box2 {
   margin: 50px 10px 20px 0;
   border: 2px solid black;
   display: flex-block;
-}
+}*/
 
 
 
