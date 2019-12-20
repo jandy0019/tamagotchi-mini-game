@@ -50,7 +50,17 @@ const game = {
 		clearInterval(this.time)
 	},
 	ageTom() {	
-		// if (this.age >= 2)
+		if (this.age = 1) {
+			$('.container').css({
+				'width': '400px',
+				'height': '400px'
+			})
+			$('.head').css({
+				'width': '400px',
+				'height': '400px',
+				'background': 'purple'
+			})
+		}
 	},
 	feedTom() {
 		if (this.hunger >= 1) 
@@ -59,22 +69,32 @@ const game = {
 			$('.tom').removeClass('.container')
 			$('.tom').addClass('.container-eat')
 			$('.container').addClass('.head-after')
+			$('.container').addClass('.mouth-after')
 		
 	},
 	sleepTom() {
 		if (this.sleepiness >= 5) 
 			this.sleepiness -= 5
-			$('body').css('background', 'black')
-			$( ".container" ).fadeOut( "slow", function() {
- 		 });
-		
+			$('.container').fadeOut( "slow", function() {
+ 		 	});
+ 		 	$('body').fadeOut( "slow", function() {
+ 		 	});
+ 		 		$('body').css('background-image', "")
+				$('body').append($('.stars'))
+				$('body').append($('.twinkling'))
+				$('body').append($('.clouds'))
+ 		 	$('body').fadeIn( "slow", function() {
+ 		 	});
+			console.log($('.clouds'));
+			console.log();
 	},
 	entertainTom() {
 		if (this.boredom >= 1) 
 			this.boredom -= 1
 			console.log();
-			$('.tom').removeClass('.container')
-			$('.tom').addClass('.container-play')
+			// $('.tom').removeClass('.container')
+			// $('.tom').addClass('.container-play')
+			$('.head').css('animation', 'play 2s', 'ease 0s', 'infinite')
 		
 	},
 	deadTom() {
@@ -95,7 +115,7 @@ const game = {
 				'background-color': 'black',
 	  			'color': 'white'
 			}).text(`R.I.P.`)
-	    	this.stopGame()
+	    	this.stopTimer()
 	    } else if (this.boredom == 10) {
 	    	$('footer').fadeOut( "slow", function() {
  		 	});
@@ -113,7 +133,7 @@ const game = {
 				'background-color': 'black',
 	  			'color': 'white'
 			}).text(`R.I.P.`)
-	    	this.stopGame()
+	    	this.stopTimer()
 	    } else if (this.sleepiness == 10) {
 	    	$('footer').fadeOut( "slow", function() {
  		 	});
@@ -131,7 +151,7 @@ const game = {
 				'background-color': 'black',
 					'color': 'white'
 			}).text(`R.I.P.`)
-	    	this.stopGame()
+	    	this.stopTimer()
 	    }
 	},
 	showStats() {
