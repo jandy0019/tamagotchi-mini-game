@@ -9,18 +9,92 @@ body {
 header {
   height: 100%;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid green;
+  background-color: rgb(64, 64, 64, .2);
   margin-bottom: 10%;
 }
+
+header h1, form {
+  text-align: center;
+}
+
+form {
+  padding-bottom: 30px;
+}
+
+#set-name {
+  border: 1px solid green;
+}
+
+
 
 main-footer {
   /*display: block;*/
 }
 
+.statsdiv {
+  height: 50%;
+  width: 100%;
+  /*border: 1px solid black;*/
+  margin-top: 0%;
+  margin-right: 30%
+  background-color: rgb(64, 64, 64, .2);
+  display: flex;
+  position: absolute;
+}
+
+.stats {
+  list-style: none;
+  font-size: 20px;
+  color: white;
+  margin-right: 50px;
+  display: inline-block;
+  position: absolute;
+  /*margin-right: 40px;*/
+}
+
+#age {
+  margin: -50px 0 50px 20px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #AED137;
+  border-radius: 15px 50px; 
+  text-align: center;
+  background-color: #176A46;
+}
+
+#hunger {
+  margin: -10px 0 20px 20px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #AED137;
+  border-radius: 15px 50px; 
+  text-align: center;
+  background-color: #176A46;
+  /*display: inline-flex;*/
+  /*position: absolute;*/
+}
+
+#boredom {
+  margin: 40px 0 20px 20px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #AED137;
+  border-radius: 15px 50px; 
+  text-align: center;
+  background-color: #176A46;
+}
+
+#sleepiness {
+  margin: 40px 0 20px 20px;
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #AED137;
+  border-radius: 15px 50px; 
+  text-align: center;
+  background-color: #176A46;
+}
+
 main {
-  margin: 10% 0 30% 0%;
+  margin: 10% 0 30% 15%;
   padding-right: 40%;
-  animation: movebody 5s linear 0s infinite
+  /*animation: awake 5s linear 0s infinite*/
   padding-top: 20%;
   position: relative;
   display: flex-block;
@@ -35,7 +109,31 @@ main {
   right: 0;
   width: 200px;
   height: 200px;
-  animation: movebody 5s linear 0s infinite
+  animation: awake 5s linear 0s infinite
+}
+
+.container-eat {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  animation: eat 1s linear 0s infinite
+}
+
+.container-play {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  animation: play 2s ease 0s infinite
 }
 
 .horn {
@@ -72,7 +170,7 @@ main {
   border-radius: 100%;
 }
 
-.head:after {
+.head-after {
   content: '';
   position: absolute;
   top: 20px;
@@ -196,14 +294,14 @@ main {
 footer {
   height: 40%;
   width: 100%;
-  border: 1px solid black;
-  margin-top: 10%;
+  border: 1px solid green;
+  margin-top: -20%;
   background-color: rgb(64, 64, 64, .2);
   display: flex;
   position: absolute;
 }
 
-footer .stats {
+/*footer .stats {
   list-style: none;
   font-size: 20px;
   color: white;
@@ -211,44 +309,87 @@ footer .stats {
   display: inline-block;
   position: absolute;
   /*margin-right: 40px;*/
+/*}*/
+
+.tombuttons {
+  margin: 0 auto;
+  position: relative;
+  display: inline;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
 }
 
-footer #hunger {
-  margin: 20px 0 20px 20px;
-  padding: 5px 20px 5px 20px;
+#feed {
+  margin: 5px 50px 5px 20px;
+  padding: 5px 150px 5px 50px;
   border: 1px solid #AED137;
-  border-radius: 15px 50px; 
+  border-radius: 15px; 
   text-align: center;
   background-color: #176A46;
-  /*display: inline-flex;*/
-  /*position: absolute;*/
+  height: 40%;
+  width: 100px;
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
 }
 
-footer #boredom {
-  margin: 20px 0 20px 20px;
-  padding: 5px 20px 5px 20px;
+#play {
+  margin: 5px 50px 5px 20px;
+  padding: 5px 150px 5px 50px;
   border: 1px solid #AED137;
-  border-radius: 15px 50px; 
+  border-radius: 15px; 
   text-align: center;
   background-color: #176A46;
+  height: 40%;
+  width: 100px;
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
 }
 
-footer #sleepiness {
-  margin: 20px 0 20px 20px;
-  padding: 5px 20px 5px 20px;
+#sleep {
+  margin: 5px 50px 5px 20px;
+  padding: 5px 160px 5px 45px;
   border: 1px solid #AED137;
-  border-radius: 15px 50px; 
+  border-radius: 15px; 
   text-align: center;
   background-color: #176A46;
+  height: 40%;
+  width: 100px;
+  /*display: inline-block;*/
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
+}
+
+.dead {
+  position: relative;
+  margin: 0 auto;
+  font-size: 50px;
+  padding: 40px;
+  background-color: black;
+  color: white;
 }
 
 
-@keyframes movebody {
-    0% {bottom: 250px;right: 350px; left: -100px;}
-    50% {bottom: 375px;right: 250px; left: 440px;}
-    100% {bottom: 350px;right: 300px; left: 0px;}
+
+@keyframes awake {
+    0% {right: 250px; left: -50px;}
+    50% {right: 250px; left: 440px;}
+    100% {right: 300px; left: 0px;}
 }
 
+@keyframes eat {
+    0% {bottom: 150px;right: 180px}
+    50% {bottom: 230px;right: 230px}
+    100% {bottom: 150px;right: 180px}
+}
+
+@keyframes play {
+    0% {bottom: 350px;right: 280px}
+    50% {bottom: 480px;right: 250px}
+    100% {bottom: 350px;right: 280px}
+}
 
 /*footer .stats-box {
   height: 8%;
