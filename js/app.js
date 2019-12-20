@@ -30,6 +30,7 @@ const game = {
    		this.newGame()
    		this.showStats()
    		console.log(this.time);
+   		this.ageTom()
    		if (this.time % 5 === 0){
    				this.age++
 	      	}
@@ -51,9 +52,21 @@ const game = {
 		clearInterval(this.time)
 	},
 	ageTom() {	
-		if (this.age = 1) {
-			$('.head').css({
+		if (this.age === 1) {
+			$('.iris').css({
 				'background': 'purple'
+			})
+		} else if (this.age === 2) {
+			$('.iris').css({
+				'background': 'blue'
+			})
+		} else if (this.age === 3) {
+			$('.iris').css({
+				'background': 'yellow'
+			})
+		} else if (this.age === 4) {
+			$('.iris').css({
+				'background': 'pink'
 			})
 		}
 		console.log('beepboop');
@@ -62,8 +75,7 @@ const game = {
 		if (this.hunger >= 1) 
 			this.hunger--
 			console.log(this.hunger);
-			$('.tom').removeClass('.container')
-			$('.tom').addClass('.container-eat')
+			$('.head').css('animation', 'eat 2s', 'linear 0s', 'infinite')
 			$('.container').addClass('.head-after')
 			$('.container').addClass('.mouth-after')
 		
@@ -73,33 +85,22 @@ const game = {
 			this.sleepiness -= 5
 			$('.container').fadeOut( "slow", function() {
  		 	});
- 		 	// $('body').fadeOut( "slow", function() {
- 		 	// });
- 		 
+ 		 	
 			$('body').append($('.stars'))
 			$('body').append($('.twinkling'))
 			$('body').append($('.clouds'))
+
+		if (this.time >= 5) {
+			$('.container').fadeIn( "slow", function() {
+ 		 	});
+		}
  		 	
-			console.log($('.clouds'));
-			console.log();
 	},
 	entertainTom() {
 		if (this.boredom >= 1) 
 			this.boredom -= 1
 			console.log();
 			$('.head').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.horn').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.horn right').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.face').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.eye').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.iris').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.mouth').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.hand').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.hand right').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.leg').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.leg two').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.hand').css('animation', 'play 2s', 'ease 0s', 'infinite')
-			// $('.hand').css('animation', 'play 2s', 'ease 0s', 'infinite')
 		
 	},
 	deadTom() {
